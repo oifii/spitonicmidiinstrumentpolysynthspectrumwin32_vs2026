@@ -1,0 +1,5 @@
+for spear text partials file format
+see document spear_klingbeil-dissertation-web.pdf
+page 77
+
+spi.

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD5E4A2A-1DEA-4E63-B783-B55E75DC0314}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>spitonicmidiinstrumentsynthwin32</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;PA_USE_ASIO=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib-src\portaudio\include;..\lib-src\freeimage\Source\;..\spiwavsetlib;..\lib-src\portmidi\pm_common;..\lib-src\portmidi\porttime;..\lib-src\tonic\Tonic-master\Tonic-master\src;..\lib-src\libsndfile\include;..\lib-src\rfftw_vs2019</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>..\lib-src\freeimage_vs2019\Dist\x32\FreeImage.lib;winmm.lib;..\spiwavsetlib_vs2019u\debug\spiwavsetlib_vs2019.lib;..\lib-src\portaudio\build\msvc\Win32\Debug\portaudio_x86.lib;..\lib-src\portmidi\Release\portmidi_s.lib;..\lib-src\tonic\Tonic-master\Tonic-master\lib\TonicLibVS2019\Debug\TonicLib.lib;..\lib-src\libsndfile\libsndfile-1.lib;..\lib-src\rfftw_vs2019\Release\rfftw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;PA_USE_ASIO=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib-src\portaudio-2021\portaudio_vs2026\include;..\lib-src\freeimage_vs2026(x64)\Source\;..\spiwavsetlib;..\lib-src\portmidi\pm_common;..\lib-src\portmidi\porttime;..\lib-src\tonic(x64)\Tonic-master\Tonic-master\src;..\lib-src\libsndfile(x64)\include;..\lib-src\rfftw_vs2026</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>..\lib-src\freeimage_vs2026(x64)\Dist\x64\FreeImage.lib;winmm.lib;..\spiwavsetlib_vs2026u\x64\debug\spiwavsetlib_vs2019.lib;..\lib-src\portaudio-2021\portaudio_vs2026\build\msvc\x64\Debug\portaudio_x64.lib;..\lib-src\portmidi(x64)\x64\Release\portmidi-dynamic.lib;..\lib-src\tonic(x64)\Tonic-master\Tonic-master\lib\TonicLibVS2026\x64\Debug\TonicLib.lib;..\lib-src\libsndfile(x64)\lib\libsndfile-1.lib;..\lib-src\rfftw_vs2026\x64\Release\rfftw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;PA_USE_ASIO=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib-src\portaudio\include;..\lib-src\freeimage\Source\;..\spiwavsetlib;..\lib-src\portmidi\pm_common;..\lib-src\portmidi\porttime;..\lib-src\tonic\Tonic-master\Tonic-master\src;..\lib-src\libsndfile\include;..\lib-src\rfftw_vs2019</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>..\lib-src\freeimage_vs2019\Dist\x32\FreeImage.lib;winmm.lib;..\spiwavsetlib_vs2019u\release\spiwavsetlib_vs2019.lib;..\lib-src\portaudio\build\msvc\Win32\Release\portaudio_x86.lib;..\lib-src\portmidi\Release\portmidi_s.lib;..\lib-src\tonic\Tonic-master\Tonic-master\lib\TonicLibVS2019\Release\TonicLib.lib;..\lib-src\libsndfile\libsndfile-1.lib;..\lib-src\rfftw_vs2019\Release\rfftw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;PA_USE_ASIO=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib-src\portaudio-2021\portaudio_vs2026\include;..\lib-src\freeimage_vs2026(x64)\Source\;..\spiwavsetlib;..\lib-src\portmidi\pm_common;..\lib-src\portmidi\porttime;..\lib-src\tonic(x64)\Tonic-master\Tonic-master\src;..\lib-src\libsndfile(x64)\include;..\lib-src\rfftw_vs2026</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>..\lib-src\freeimage_vs2026(x64)\Dist\x64\FreeImage.lib;winmm.lib;..\spiwavsetlib_vs2026u\x64\release\spiwavsetlib_vs2019.lib;..\lib-src\portaudio-2021\portaudio_vs2026\build\msvc\x64\Release\portaudio_x64.lib;..\lib-src\portmidi(x64)\x64\Release\portmidi-dynamic.lib;..\lib-src\tonic(x64)\Tonic-master\Tonic-master\lib\TonicLibVS2026\x64\Release\TonicLib.lib;..\lib-src\libsndfile(x64)\lib\libsndfile-1.lib;..\lib-src\rfftw_vs2026\x64\Release\rfftw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico" />
+    <None Include="spitonic.licenseheader" />
+    <None Include="spitonicmidiinstrumentsynthwin32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArbitraryTableLookupSynth.h" />
+    <ClInclude Include="BandlimitedOscillatorTestSynth.h" />
+    <ClInclude Include="BasicSynth.h" />
+    <ClInclude Include="BufferPlayerExpSynth.h" />
+    <ClInclude Include="CompressorDuckingTestSynth.h" />
+    <ClInclude Include="CompressorExpSynth.h" />
+    <ClInclude Include="CompressorTestSynth.h" />
+    <ClInclude Include="ControlSnapToScaleTestSynth.h" />
+    <ClInclude Include="ControlSwitcherExpSynth.h" />
+    <ClInclude Include="ControlSwitcherTestSynth.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="DelayTestSynth.h" />
+    <ClInclude Include="EventsExpSynth.h" />
+    <ClInclude Include="EventsSynth.h" />
+    <ClInclude Include="FilteredNoiseSynth.h" />
+    <ClInclude Include="FilterExpSynth.h" />
+    <ClInclude Include="FMDroneSynth.h" />
+    <ClInclude Include="InputDemoSynth.h" />
+    <ClInclude Include="LFNoiseTestSynth.h" />
+    <ClInclude Include="PolySynth.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ReverbTestSynth.h" />
+    <ClInclude Include="SimpleInstrumentBasicSynth.h" />
+    <ClInclude Include="SimpleInstrumentBufferPlayerSynth.h" />
+    <ClInclude Include="SimpleInstrumentSineSumSynth.h" />
+    <ClInclude Include="SimpleInstrumentSynth.h" />
+    <ClInclude Include="SimpleInstrumentTableLookupSPEARSynth.h" />
+    <ClInclude Include="SimpleInstrumentTableLookupSynth.h" />
+    <ClInclude Include="SimpleStepSeqSynth.h" />
+    <ClInclude Include="SineSumSynth.h" />
+    <ClInclude Include="speartextpartialsreader.h" />
+    <ClInclude Include="spiaudiodevice.h" />
+    <ClInclude Include="spiregreadwrite.h" />
+    <ClInclude Include="spitonicmidiinstrumentsynthwin32.h" />
+    <ClInclude Include="spitonicsynths.h" />
+    <ClInclude Include="spiutility.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StepSequencerBufferPlayerEffectExpSynth.h" />
+    <ClInclude Include="StepSequencerBufferPlayerExpSynth.h" />
+    <ClInclude Include="StepSequencerExpSynth.h" />
+    <ClInclude Include="StepSequencerSynth.h" />
+    <ClInclude Include="StereoDelayTestSynth.h" />
+    <ClInclude Include="SynthsAsGeneratorsDemoSynth.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="XYSpeedSynth.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PolySynth.cpp" />
+    <ClCompile Include="speartextpartialsreader.cpp" />
+    <ClCompile Include="spiaudiodevice.cpp" />
+    <ClCompile Include="spiregreadwrite.cpp" />
+    <ClCompile Include="spitonicmidiinstrumentsynthwin32.cpp" />
+    <ClCompile Include="spitonicsynths.cpp" />
+    <ClCompile Include="spiutility.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="spitonicmidiinstrumentsynthwin32.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

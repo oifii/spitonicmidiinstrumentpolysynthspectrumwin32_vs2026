@@ -1,0 +1,9 @@
+http://www.klingbeil.com/spear/
+
+SPEAR_latest_setup.exe is the SPEAR application which generates
+the spear text partials file we process with spispeartextpartialsreader
+
+just install it once load a wave file and export as text partials to get the
+file we need to process with spispeartextpartialsreader
+
+spi.
